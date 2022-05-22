@@ -1,4 +1,11 @@
 #!/bin/sh
+
+# Aliases useful for LSP
+alias ccls_gen="find . -type f -name '*.h' | sed -r 's|/[^/]+$||' | \
+  sort | uniq | sed -r 's/^\.\//-I\.\//' > .ccls"
+
+alias clangd_gen="make -wn | compiledb -o- > compile_commands.json"
+
 # zsh things
 alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
 alias nvimrc='nvim ~/.config/nvim/'

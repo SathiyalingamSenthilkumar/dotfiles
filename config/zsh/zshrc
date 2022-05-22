@@ -83,10 +83,6 @@ xset r rate 210 40
 # Speedy keys
 xset r rate 210 40
 
-# Environment variables set everywhere
-export EDITOR="nvim"
-export TERMINAL="kitty"
-
 # For QT Themes
 export QT_QPA_PLATFORMTHEME=qt5ct
 

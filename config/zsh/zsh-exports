@@ -2,10 +2,16 @@
 # HISTFILE="$XDG_DATA_HOME"/zsh/history
 HISTSIZE=1000000
 SAVEHIST=1000000
+
+# path
 export PATH="$HOME/.local/bin":$PATH
+export PATH="/usr/local/opt/make/libexec/gnubin:$PATH" # For GNU Make
+
+# man page
 export MANPAGER='nvim +Man!' # Man page in nvim
 export MANWIDTH=999
 
+# global enviroment variables
 export EDITOR="nvim"
 export TERMINAL="kitty"
 

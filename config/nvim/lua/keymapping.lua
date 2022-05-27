@@ -6,7 +6,14 @@ local g = {
 }
 h.set_globals(g)
 
--- Modes: 'n'ormal, 'i'nsert, 'v'isual, 'x'visual_block, 't'erm, 'c'ommand
+-- Modes
+--   normal_mode = 'n',
+--   insert_mode = 'i',
+--   visual_mode = 'v',
+--   visual_block_mode = 'x',
+--   term_mode = 't',
+--   command_mode = 'c',
+
 local n_keys = {
   -- Set space as leader
   { '', '<Space>', '<Nop>' },
@@ -29,6 +36,12 @@ local n_keys = {
   { 'n', '<Leader>j',  '<C-w>j' }, -- Down
   { 'n', '<Leader>k',  '<C-w>k' }, -- Up
   { 'n', '<Leader>l',  '<C-w>l' }, -- Right
+
+  -- Window resize with arrows
+  { 'n', '<Leader><Up>',    ':resize -5<CR>' },
+  { 'n', '<Leader><Down>',  ':resize +5<CR>' },
+  { 'n', '<Leader><Left>',  ':vertical resize -5<CR>' },
+  { 'n', '<Leader><Right>', ':vertical resize +5<CR>' },
 }
 
 local v_keys = {

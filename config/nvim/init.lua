@@ -4,6 +4,7 @@ require('autocmds')
 require('keymapping')
 require('options')
 
+require('plugin-settings.autopairs')
 require('plugin-settings.bufferline')
 require('plugin-settings.cmp')
 require('plugin-settings.colorizer')

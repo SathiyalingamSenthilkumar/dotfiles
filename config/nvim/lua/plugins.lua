@@ -87,6 +87,9 @@ return require('packer').startup(function(use)
   use { 'jose-elias-alvarez/null-ls.nvim' } -- Null LS for extras
   use { 'simrat39/symbols-outline.nvim' }
 
+  -- Autopairs (To automatically open and close brackets)
+  use { 'windwp/nvim-autopairs' }
+
   if PACKER_BOOTSTRAP then
     packer.sync()
   end

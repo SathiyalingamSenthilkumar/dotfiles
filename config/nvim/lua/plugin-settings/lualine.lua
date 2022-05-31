@@ -39,11 +39,11 @@ lualine.setup({
   },
   -- branch, diagnostics, diff, encoding, filetype, fileformat, location, mode, progress
   sections = {
-    lualine_a = { branch },
-    lualine_b = { 'diff' },
+    lualine_a = { 'mode' },
+    lualine_b = { 'branch', 'diff' },
     lualine_c = { 'filename' },
     lualine_x = { 'encoding' },
-    lualine_y = { diagnostics, 'filetype' },
+    lualine_y = { 'diagnostics', 'filetype' },
     lualine_z = { 'location', 'progress' },
   },
   tabline = {},

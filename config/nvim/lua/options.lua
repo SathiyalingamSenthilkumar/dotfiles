@@ -38,9 +38,9 @@ local o = {
 
   -- Tab stuff
   expandtab = true,       -- Replace tab with spaces
-  shiftwidth = 2,         -- Indentation width
+  shiftwidth = 4,         -- Indentation width
   smartindent = true,
-  tabstop = 2,            -- Spaces per tab
+  tabstop = 4,            -- Spaces per tab
 
   -- Searching
   hlsearch = true,        -- Highlight search

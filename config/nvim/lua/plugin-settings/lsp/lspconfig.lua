@@ -8,7 +8,8 @@ end
 local servers = {
   "clangd",                 -- C/C++
   "jedi_language_server",   -- Python
-  "sumneko_lua"             -- LUA
+  "sumneko_lua",             -- LUA
+  "robotframework_ls"       -- Robot framework
 }
 
 local default_setup = {

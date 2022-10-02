@@ -90,6 +90,9 @@ return require('packer').startup(function(use)
   -- Autopairs (To automatically open and close brackets)
   use { 'windwp/nvim-autopairs' }
 
+  -- Filetype detection
+  use { 'nathom/filetype.nvim' }
+
   if PACKER_BOOTSTRAP then
     packer.sync()
   end

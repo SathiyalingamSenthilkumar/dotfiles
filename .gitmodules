@@ -1,0 +1,3 @@
+[submodule "config/awesome/charitable"]
+	path = config/awesome/charitable
+	url = https://github.com/frioux/charitable.git

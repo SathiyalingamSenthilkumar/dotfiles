@@ -588,3 +588,9 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- see https://github.com/awesomeWM/awesome/issues/2780
 awful.tag.history.restore = function() end
 -- }}}
+
+-- Auto-start applications
+-- Display compositer
+awful.spawn.with_shell("picom")
+-- Set background wallpaper
+awful.spawn.with_shell("nitrogen --restore")

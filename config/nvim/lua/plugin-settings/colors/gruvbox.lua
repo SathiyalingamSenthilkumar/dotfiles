@@ -7,6 +7,10 @@ end
 vim.g.gruvbox_contrast_dark = 'hard'
 
 gb.setup({
+    contrast = "hard",
+    palette_overrides = {
+        dark0_hard = "#1c1c1c",
+    },
     overrides = {
         -- Color overides
         String = { fg =  "#99CCFF", italic = true },

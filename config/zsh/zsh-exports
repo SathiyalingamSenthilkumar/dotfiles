@@ -15,3 +15,13 @@ export MANWIDTH=999
 export EDITOR="nvim"
 export TERMINAL="kitty"
 
+PATH="${PATH}:/opt/gcc-arm-none-eabi/bin"
+PATH="${PATH}:/opt/JLink_Linux"
+PATH="${PATH}:/opt/nrf-command-line-tools/bin"
+export PATH
+
+LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:/opt/JLink_Linux"
+export LD_LIBRARY_PATH
+
+GNU_INSTALL_ROOT="/opt/gcc-arm-none-eabi"
+export GNU_INSTALL_ROOT

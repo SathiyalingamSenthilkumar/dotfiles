@@ -594,3 +594,6 @@ awful.tag.history.restore = function() end
 awful.spawn.with_shell("picom")
 -- Set background wallpaper
 awful.spawn.with_shell("nitrogen --restore")
+
+-- Gap between tiles
+beautiful.useless_gap = 1

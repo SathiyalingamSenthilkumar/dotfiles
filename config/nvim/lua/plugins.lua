@@ -49,7 +49,7 @@ return require('packer').startup(function(use)
   -- Lualine
   use { 'nvim-lualine/lualine.nvim' }
 
-  --Telescope
+  --Telescope (requires BurntSushi/ripgrep for live_grep to work)
   use { 'nvim-telescope/telescope.nvim' }
 
   -- GIT handler

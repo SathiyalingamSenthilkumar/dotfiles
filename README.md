@@ -1,6 +1,6 @@
 # dotfiles
 
-Dotfiles for Mac computer. 
+Dotfiles for Unix/Linux environment.
 
 ## Setting up the configuration
 
@@ -22,7 +22,9 @@ bash install.sh
 
 ### zsh
 * The path for custom `.zshrc` file should be specified.
-* To the file `~/.zshenv` (Create one if not present already) add this line:
+* Add the following line to `~/.zshenv` file:
 ```
 ZDOTDIR=~/.config/zsh
 ```
+### neovim
+* Telescope needs [ripgrep](https://github.com/BurntSushi/ripgrep) to be installed.

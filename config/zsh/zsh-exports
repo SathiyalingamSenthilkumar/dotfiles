@@ -18,6 +18,7 @@ export TERMINAL="kitty"
 PATH="${PATH}:/opt/gcc-arm-none-eabi/bin"
 PATH="${PATH}:/opt/JLink_Linux"
 PATH="${PATH}:/opt/nrf-command-line-tools/bin"
+PATH="${PATH}:/opt/clangd/bin"
 export PATH
 
 LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:/opt/JLink_Linux"

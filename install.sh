@@ -13,18 +13,18 @@ symlinker() {
   fi
 }
 
-SCRIPT_DIR="$(cd "$(dirname "${0}")" && pwd -P)"
+DOTFILES_DIR="$(cd "$(dirname "${0}")" && pwd -P)"
 TARGET=${1}
 
 PLATFORM=$(uname -s)
 
-CONFIG_SRC="${SCRIPT_DIR}/config"
+CONFIG_SRC="${DOTFILES_DIR}/config"
 CONFIG_DST="${HOME}/.config"
 
-LOCAL_BIN_SRC="${SCRIPT_DIR}/local/bin"
+LOCAL_BIN_SRC="${DOTFILES_DIR}/local/bin"
 LOCAL_BIN_DST="${HOME}/.local/bin"
 
-LINUX_FONT_SRC="${SCRIPT_DIR}/local/share/fonts"
+LINUX_FONT_SRC="${DOTFILES_DIR}/local/share/fonts"
 LINUX_FONT_DST="${HOME}/.local/share/fonts"
 
 # Find all direcories in config/
@@ -41,7 +41,7 @@ done
 
 # Find fonts
 LINUX_FONT_NAMES=()
-for f in ${SCRIPT_DIR}/local/share/fonts/*; do
+for f in ${DOTFILES_DIR}/local/share/fonts/*; do
   LINUX_FONT_NAMES+=("$(basename "${f}")")
 done
 

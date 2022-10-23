@@ -21,6 +21,9 @@ PLATFORM=$(uname -s)
 CONFIG_SRC="${SCRIPT_DIR}/config"
 CONFIG_DST="${HOME}/.config"
 
+LOCAL_BIN_SRC="${SCRIPT_DIR}/local/bin"
+LOCAL_BIN_DST="${HOME}/.local/bin"
+
 LINUX_FONT_SRC="${SCRIPT_DIR}/local/share/fonts"
 LINUX_FONT_DST="${HOME}/.local/share/fonts"
 
@@ -30,6 +33,13 @@ for d in ${CONFIG_SRC}/*/; do
   CONFIG_NAMES+=("$(basename "${d}")")
 done
 
+# Find all files in local/bin/
+LOCAL_BIN_NAMES=()
+for f in ${LOCAL_BIN_SRC}/*; do
+  LOCAL_BIN_NAMES+=("$(basename "${f}")")
+done
+
+# Find fonts
 LINUX_FONT_NAMES=()
 for f in ${SCRIPT_DIR}/local/share/fonts/*; do
   LINUX_FONT_NAMES+=("$(basename "${f}")")
@@ -56,7 +66,12 @@ case ${PLATFORM} in
     ;;
 esac
 
+# Setup .config directory
 for d in ${CONFIG_NAMES[@]}; do
   symlinker "${CONFIG_SRC}/${d}" "${CONFIG_DST}/${d}"
 done
 
+# Setup .local/bin directory
+for f in ${LOCAL_BIN_NAMES[@]}; do
+  symlinker "${LOCAL_BIN_SRC}/${f}" "${LOCAL_BIN_DST}/${f}"
+done

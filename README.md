@@ -28,3 +28,9 @@ ZDOTDIR=~/.config/zsh
 ```
 ### neovim
 * Telescope needs [ripgrep](https://github.com/BurntSushi/ripgrep) to be installed.
+
+### awesome
+* The config has dependencies on following packages:
+    * picom - Compositor for Xorg.
+    * nitrogen - Desktop background setter for X-Window.
+    * apcid - Battery widget (look into submodule battery-widget).

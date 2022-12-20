@@ -108,6 +108,24 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- Keyboard map indicator and switcher
 mykeyboardlayout = awful.widget.keyboardlayout()
 
+-- Battery indicator
+local my_battery_widget = require("battery-widget") {
+    percent_colors = {
+        { 25, "red"   },
+        { 50, "orange"},
+        {999, "green" },
+    },
+    listen = true,
+    timeout = 10,
+    widget_text = "${AC_BAT}${color_on}${percent}%${color_off}",
+    widget_font = "Deja Vu Sans Mono 9",
+    tooltip_text = "Battery ${state}${time_est}\nCapacity: ${capacity_percent}%",
+    alert_threshold = 5,
+    alert_timeout = 0,
+    alert_title = "Low battery !",
+    alert_text = "${AC_BAT}${time_est}"
+}
+
 -- {{{ Wibar
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
@@ -230,6 +248,7 @@ awful.screen.connect_for_each_screen(function(s)
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
             mykeyboardlayout,
+            my_battery_widget,
             wibox.widget.systray(),
             mytextclock,
             s.mylayoutbox,

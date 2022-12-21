@@ -175,9 +175,11 @@ end
 screen.connect_signal("property::geometry", set_wallpaper)
 
 -- Create tags
+local num_tags = 10
 local tags = charitable.create_tags(
-   { "1", "2", "3", "4", "5", "6", "7", "8", "9" },
+   { "1", "2", "3", "4", "5", "6", "7", "8", "9", "0" },
    {
+      awful.layout.layouts[1],
       awful.layout.layouts[1],
       awful.layout.layouts[1],
       awful.layout.layouts[1],
@@ -414,20 +416,20 @@ clientkeys = gears.table.join(
 -- Bind all key numbers to tags.
 -- Be careful: we use keycodes to make it work on any keyboard layout.
 -- This should map on the top row of your keyboard, usually 1 to 9.
-for i = 1, 9 do
+for i = 1, num_tags do
     globalkeys = gears.table.join(globalkeys,
         -- View tag only.
         awful.key({ modkey }, "#" .. i + 9,
                   function ()
                         charitable.select_tag(tags[i], awful.screen.focused())
                   end,
-                  {description = "view tag #"..i, group = "tag"}),
+                  {description = "view tag #"..i % num_tags, group = "tag"}),
         -- Toggle tag display.
         awful.key({ modkey, "Control" }, "#" .. i + 9,
                   function ()
                         charitable.toggle_tag(tags[i], awful.screen.focused())
                   end,
-                  {description = "toggle tag #" .. i, group = "tag"}),
+                  {description = "toggle tag #" .. i % num_tags, group = "tag"}),
         -- Move client to tag.
         awful.key({ modkey, "Shift" }, "#" .. i + 9,
                   function ()
@@ -438,7 +440,7 @@ for i = 1, 9 do
                           end
                      end
                   end,
-                  {description = "move focused client to tag #"..i, group = "tag"}),
+                  {description = "move focused client to tag #"..i % num_tags, group = "tag"}),
         -- Toggle tag on focused client.
         awful.key({ modkey, "Control", "Shift" }, "#" .. i + 9,
                   function ()
@@ -449,7 +451,7 @@ for i = 1, 9 do
                           end
                       end
                   end,
-                  {description = "toggle focused client on tag #" .. i, group = "tag"})
+                  {description = "toggle focused client on tag #" .. i % num_tags, group = "tag"})
     )
 end
 

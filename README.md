@@ -28,6 +28,9 @@ ZDOTDIR=~/.config/zsh
 ```
 ### neovim
 * Telescope needs [ripgrep](https://github.com/BurntSushi/ripgrep) to be installed.
+* The clipboard utility of neovim is platform dependent, as neovim uses different clipboard tools on different platforms. The help for clipboard `:h clipboard` describes the clipboard tool needed for each platform.
+* Run `:checkhealth` on neovim to verify the working condition of different utilities.
+
 
 ### awesome
 * The config has dependencies on following packages:

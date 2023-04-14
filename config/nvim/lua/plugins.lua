@@ -29,10 +29,7 @@ return require('packer').startup(function(use)
   use { 'rcarriga/nvim-notify' }
 
   -- Colorschemes
-  use { 'mofiqul/dracula.nvim' }
-  use { 'lunarvim/darkplus.nvim' }
   use { 'ellisonleao/gruvbox.nvim' }
-  use { 'folke/tokyonight.nvim' }
 
   -- Buffer closer
   use { 'moll/vim-bbye' }

@@ -24,7 +24,4 @@ require('plugin-settings.lsp.lspconfig')
 require('plugin-settings.lsp.lspsaga')
 require('plugin-settings.lsp.null-ls')
 
---require('plugin-settings.colors.dracula')
---require('plugin-settings.colors.darkplus')
 require('plugin-settings.colors.gruvbox')
---require('plugin-settings.colors.tokyonight')

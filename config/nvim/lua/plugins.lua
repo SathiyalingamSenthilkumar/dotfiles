@@ -60,10 +60,12 @@ return require('packer').startup(function(use)
   -- Treesitter
   use { 'nvim-treesitter/nvim-treesitter',
     run = { ':TSUpdate' },
-    requires = {
-      { 'nvim-treesitter/nvim-treesitter-textobjects' },
-      { 'lewis6991/nvim-treesitter-context' },
-    },
+    requires = { 'lewis6991/nvim-treesitter-context' },
+  }
+
+  use { 'nvim-treesitter/nvim-treesitter-textobjects',
+      after = { 'nvim-treesitter' },
+      requires = { 'nvim-treesitter/nvim-treesitter' },
   }
 
   --LSP

@@ -22,23 +22,8 @@ return require('packer').startup(function(use)
     }
   }
 
-  -- Navigation
-  use { 'phaazon/hop.nvim' }
-
-  -- Notifications
-  use { 'rcarriga/nvim-notify' }
-
   -- Colorschemes
   use { 'ellisonleao/gruvbox.nvim' }
-
-  -- Buffer closer
-  use { 'moll/vim-bbye' }
-
-  -- File explorer
-  use { 'kyazdani42/nvim-tree.lua' }
-
-  -- Project management
-  use { 'ahmedkhalf/project.nvim' }
 
   -- Bufferline
   use { 'akinsho/bufferline.nvim', }
@@ -46,15 +31,31 @@ return require('packer').startup(function(use)
   -- Lualine
   use { 'nvim-lualine/lualine.nvim' }
 
-  --Telescope (requires BurntSushi/ripgrep for live_grep to work)
-  use { 'nvim-telescope/telescope.nvim' }
-
-  -- GIT handler
-  use { 'lewis6991/gitsigns.nvim' }
+  -- File explorer
+  use { 'kyazdani42/nvim-tree.lua' }
 
   -- Color highlighter
   use { 'norcalli/nvim-colorizer.lua' }
 
+  -- GIT handler
+  use { 'lewis6991/gitsigns.nvim' }
+
+  -- Buffer closer
+  use { 'moll/vim-bbye' }
+
+  -- Navigation
+  use { 'phaazon/hop.nvim' }
+
+  -- Notifications
+  use { 'rcarriga/nvim-notify' }
+
+  -- Project management
+  use { 'ahmedkhalf/project.nvim' }
+
+  --Telescope (requires BurntSushi/ripgrep for live_grep to work)
+  use { 'nvim-telescope/telescope.nvim' }
+
+  -- Comment toggle
   use { 'numToStr/Comment.nvim' }
 
   -- Treesitter
@@ -67,13 +68,12 @@ return require('packer').startup(function(use)
     },
     requires = { 'lewis6991/nvim-treesitter-context' },
   }
-
   use { 'nvim-treesitter/nvim-treesitter-textobjects',
       after = { 'nvim-treesitter' },
       requires = { 'nvim-treesitter/nvim-treesitter' },
   }
 
-  --LSP
+  -- LSP
   use { 'neovim/nvim-lspconfig' }
   use { 'tami5/lspsaga.nvim' }
 
@@ -83,7 +83,6 @@ return require('packer').startup(function(use)
       { 'hrsh7th/cmp-nvim-lsp' },
       { 'hrsh7th/cmp-nvim-lsp-signature-help' },
       { 'hrsh7th/cmp-path' },
-
       { 'saadparwaiz1/cmp_luasnip' },
       { 'L3MON4D3/LuaSnip' },
     }

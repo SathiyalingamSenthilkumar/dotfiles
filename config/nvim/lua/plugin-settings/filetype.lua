@@ -4,6 +4,13 @@ if not status_ok then
 end
 
 ft.setup({
-
+    overrides = {
+        extensions = {
+            c = "c",
+            h = "c",
+            sh = "bash",
+            S = "asm",
+        },
+    },
 })
 

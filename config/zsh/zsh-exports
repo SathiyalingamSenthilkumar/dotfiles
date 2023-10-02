@@ -26,3 +26,7 @@ export LD_LIBRARY_PATH
 
 GNU_INSTALL_ROOT="/opt/gcc-arm-none-eabi"
 export GNU_INSTALL_ROOT
+
+# Path for executables built from source
+PATH="${PATH}:/opt/built_from_source-bin"
+export PATH

@@ -55,10 +55,4 @@ local o = {
   writebackup = false     -- No write-backup
 }
 
-local g = {
-  do_filetype_lua = 1,    -- Use 0.7.0 LUA method of detecting filetypes
-  did_load_filetypes = 0, -- Do not load old vim filetypes as fallback
-}
-
 h.set_options(o)
-h.set_globals(g)

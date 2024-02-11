@@ -1,99 +1,103 @@
-local fn = vim.fn
+local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 
-local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-if fn.empty(fn.glob(install_path)) > 0 then
-  PACKER_BOOTSTRAP=fn.system({'git','clone','--depth','1','https://github.com/wbthomason/packer.nvim',install_path})
-  vim.cmd('packadd packer.nvim')
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    'git',
+    'clone',
+    '--filter=blob:none',
+    'https://github.com/folke/lazy.nvim.git',
+    '--branch=stable', -- latest stable release
+    lazypath,
+  })
 end
 
-local status_ok, packer = pcall(require, 'packer')
+vim.opt.rtp:prepend(lazypath)
+
+local status_ok, lazy = pcall(require, 'lazy')
 if not status_ok then
-  return
+  print('Lazy does not load!')
 end
 
--- Install here
-return require('packer').startup(function(use)
-  -- Let packer manage itself, have it depend on some common stuff
-  use { 'wbthomason/packer.nvim',
-    requires = {
-      { 'nvim-lua/popup.nvim' },
-      { 'nvim-lua/plenary.nvim' },
-      { 'kyazdani42/nvim-web-devicons' }
-    }
-  }
+local plugins = {
+  -- common stuff
+  { 'nvim-lua/popup.nvim' },
+  { 'kyazdani42/nvim-web-devicons' },
 
   -- Colorschemes
-  use { 'ellisonleao/gruvbox.nvim' }
+  { 'ellisonleao/gruvbox.nvim' },
 
   -- Bufferline
-  use { 'akinsho/bufferline.nvim', }
+  { 'akinsho/bufferline.nvim' },
 
   -- Lualine
-  use { 'nvim-lualine/lualine.nvim' }
+  { 'nvim-lualine/lualine.nvim' },
 
   -- File explorer
-  use { 'kyazdani42/nvim-tree.lua' }
+  { 'kyazdani42/nvim-tree.lua' },
 
   -- Color highlighter
-  use { 'norcalli/nvim-colorizer.lua' }
+  { 'norcalli/nvim-colorizer.lua' },
 
   -- GIT handler
-  use { 'lewis6991/gitsigns.nvim' }
+  { 'lewis6991/gitsigns.nvim' },
 
   -- Buffer closer
-  use { 'moll/vim-bbye' }
+  { 'moll/vim-bbye' },
 
   -- Navigation
-  use { 'phaazon/hop.nvim' }
+  { 'phaazon/hop.nvim' },
 
   -- Notifications
-  use { 'rcarriga/nvim-notify' }
+  { 'rcarriga/nvim-notify' },
 
   -- Project management
-  use { 'ahmedkhalf/project.nvim' }
+  { 'ahmedkhalf/project.nvim' },
 
   --Telescope (requires BurntSushi/ripgrep for live_grep to work)
-  use { 'nvim-telescope/telescope.nvim' }
+  { 'nvim-telescope/telescope.nvim',
+    dependencies = { 'nvim-lua/plenary.nvim' }
+  },
 
   -- Comment toggle
-  use { 'numToStr/Comment.nvim' }
+  { 'numToStr/Comment.nvim' },
 
   -- Treesitter
-  use { 'nvim-treesitter/nvim-treesitter',
-    run = {
+  { 'nvim-treesitter/nvim-treesitter',
+    build = {
         function()
             local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
             ts_update()
         end,
     },
-    requires = { 'lewis6991/nvim-treesitter-context' },
-  }
-  use { 'nvim-treesitter/nvim-treesitter-textobjects',
-      after = { 'nvim-treesitter' },
-      requires = { 'nvim-treesitter/nvim-treesitter' },
-  }
+    dependencies = { 'lewis6991/nvim-treesitter-context' },
+  },
+  { 'nvim-treesitter/nvim-treesitter-textobjects',
+    dependencies = {
+            { 'nvim-treesitter/nvim-treesitter' },
+            { 'nvim-treesitter' },
+        }
+  },
 
   -- LSP
-  use { 'neovim/nvim-lspconfig' }
-  use { 'tami5/lspsaga.nvim' }
+  { 'neovim/nvim-lspconfig' },
+  { 'tami5/lspsaga.nvim' },
 
   -- Autocomplete with LSP and luasnip
-  use { 'hrsh7th/nvim-cmp',
-    requires = {
+  { 'hrsh7th/nvim-cmp',
+    dependencies = {
       { 'hrsh7th/cmp-nvim-lsp' },
       { 'hrsh7th/cmp-nvim-lsp-signature-help' },
       { 'hrsh7th/cmp-path' },
       { 'saadparwaiz1/cmp_luasnip' },
       { 'L3MON4D3/LuaSnip' },
     }
-  }
-  use { 'jose-elias-alvarez/null-ls.nvim' } -- Null LS for extras
-  use { 'simrat39/symbols-outline.nvim' }
+  },
+  { 'jose-elias-alvarez/null-ls.nvim' }, -- Null LS for extras
+  { 'simrat39/symbols-outline.nvim' },
 
   -- Autopairs (To automatically open and close brackets)
-  use { 'windwp/nvim-autopairs' }
+  { 'windwp/nvim-autopairs' },
 
-  if PACKER_BOOTSTRAP then
-    packer.sync()
-  end
-end)
+}
+
+return lazy.setup(plugins)

@@ -92,7 +92,6 @@ local plugins = {
       { 'L3MON4D3/LuaSnip' },
     }
   },
-  { 'jose-elias-alvarez/null-ls.nvim' }, -- Null LS for extras
   { 'simrat39/symbols-outline.nvim' },
 
   -- Autopairs (To automatically open and close brackets)

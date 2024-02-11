@@ -21,6 +21,5 @@ require('plugin-settings.treesitter-context')
 
 require('plugin-settings.lsp.lspconfig')
 require('plugin-settings.lsp.lspsaga')
-require('plugin-settings.lsp.null-ls')
 
 require('plugin-settings.colors.gruvbox')

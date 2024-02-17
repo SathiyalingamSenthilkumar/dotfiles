@@ -1,5 +1,6 @@
 local status_ok, gb = pcall(require, 'gruvbox')
 if not status_ok then
+  print("gruvbox doesn't load!")
   return
 end
 

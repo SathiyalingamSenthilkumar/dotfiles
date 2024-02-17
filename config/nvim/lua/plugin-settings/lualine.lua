@@ -33,7 +33,6 @@ local branch = {
 lualine.setup({
   options = {
     icons_enabled = true,
-    theme = 'gruvbox',
     always_divide_middle = true,
     globalstatus = true,
   },

@@ -26,6 +26,12 @@ local plugins = {
   -- Colorschemes
   { 'ellisonleao/gruvbox.nvim' },
 
+  { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
+
+  { 'rebelot/kanagawa.nvim' },
+
+  { 'folke/tokyonight.nvim', lazy = false, priority = 1000 },
+
   -- Color highlighter
   { 'NvChad/nvim-colorizer.lua' },
 

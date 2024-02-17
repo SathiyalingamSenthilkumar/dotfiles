@@ -26,6 +26,9 @@ local plugins = {
   -- Colorschemes
   { 'ellisonleao/gruvbox.nvim' },
 
+  -- Color highlighter
+  { 'NvChad/nvim-colorizer.lua' },
+
   -- Bufferline
   { 'akinsho/bufferline.nvim' },
 
@@ -34,9 +37,6 @@ local plugins = {
 
   -- File explorer
   { 'kyazdani42/nvim-tree.lua' },
-
-  -- Color highlighter
-  { 'norcalli/nvim-colorizer.lua' },
 
   -- GIT handler
   { 'lewis6991/gitsigns.nvim' },

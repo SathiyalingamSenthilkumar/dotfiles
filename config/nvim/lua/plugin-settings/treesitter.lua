@@ -25,6 +25,7 @@ tsconfig.setup({
     'markdown',
     'python',
     'regex',
+    'robot',
     'rust',
     'vim',
     'yaml'

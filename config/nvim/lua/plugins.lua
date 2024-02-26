@@ -98,7 +98,6 @@ local plugins = {
       { 'L3MON4D3/LuaSnip' },
     }
   },
-  { 'simrat39/symbols-outline.nvim' },
 
   -- Autopairs (To automatically open and close brackets)
   { 'windwp/nvim-autopairs' },

@@ -2,14 +2,14 @@ local common = require('plugin-settings.lsp.server-settings.common_functions')
 
 local status_ok, lspconfig = pcall(require, 'lspconfig')
 if not status_ok then
+  print("lspconfig doesn't load!")
   return
 end
 
 local servers = {
   "clangd",                 -- C/C++
-  "jedi_language_server",   -- Python
-  "sumneko_lua",             -- LUA
-  "robotframework_ls"       -- Robot framework
+  "lua_ls",                 -- Lua
+  "pyright",                -- Python
 }
 
 local default_setup = {

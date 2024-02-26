@@ -6,13 +6,12 @@ local M = {}
 function M.lsp_keybinds()
   local keys = {
     -- LSP Navigation
-    { 'n', '<Leader>nd', vim.lsp.buf.declaration },
-    { 'n', '<Leader>ni', vim.lsp.buf.definition },
-    { 'n', '<Leader>no', vim.lsp.buf.implementation },
-    { 'n', '<Leader>nb', '<C-o>' },
-
-    -- Symbols-Outline
-    { 'n', '<Leader>ns', ':SymbolsOutline<CR>' },
+    { 'n', '<Leader>lD', vim.lsp.buf.declaration },
+    { 'n', '<Leader>ld', vim.lsp.buf.definition },
+    { 'n', '<Leader>lh', vim.lsp.buf.hover },
+    { 'n', '<Leader>li', vim.lsp.buf.implementation },
+    { 'n', '<Leader>lf', vim.lsp.buf.references },
+    { 'n', '<Leader>lt', vim.lsp.buf.type_definition },
   }
   h.map_keys(keys)
 end

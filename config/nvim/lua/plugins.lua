@@ -86,7 +86,7 @@ local plugins = {
 
   -- LSP
   { 'neovim/nvim-lspconfig' },
-  { 'tami5/lspsaga.nvim' },
+  { 'nvimdev/lspsaga.nvim' },
 
   -- Autocomplete with LSP and luasnip
   { 'hrsh7th/nvim-cmp',

@@ -11,12 +11,6 @@ function M.lsp_keybinds()
     { 'n', '<Leader>no', vim.lsp.buf.implementation },
     { 'n', '<Leader>nb', '<C-o>' },
 
-    -- LSP Saga
-    { 'n', '<Leader>na', ':Lspsaga code_action<CR>' },
-    { 'n', '<Leader>nc', ':Lspsaga hover_doc<CR>' },
-    { 'n', '<Leader>nx', ':Lspsaga rename<CR>' },
-    { 'n', '<Leader>nr', ':Lspsaga lsp_finder<CR>' },
-
     -- Symbols-Outline
     { 'n', '<Leader>ns', ':SymbolsOutline<CR>' },
   }
@@ -26,8 +20,7 @@ end
 -- Default AutoCMDs
 function M.lsp_autocmd()
   local cmds = {
-    { 'CursorHold',  { command = 'Lspsaga show_line_diagnostics' } },
-    --{ 'CursorHoldI', { command = 'Lspsaga signature_help' } },
+    -- { 'CursorHold',  { command = 'Lspsaga show_line_diagnostics' } },
   }
   h.create_autocmds('ToeLsp', cmds)
 end

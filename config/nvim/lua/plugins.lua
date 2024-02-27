@@ -88,6 +88,10 @@ local plugins = {
   { 'neovim/nvim-lspconfig' },
   { 'nvimdev/lspsaga.nvim' },
 
+  -- LSP Installer
+  { 'williamboman/mason.nvim' },
+  { 'williamboman/mason-lspconfig.nvim' },
+
   -- Autocomplete with LSP and luasnip
   { 'hrsh7th/nvim-cmp',
     dependencies = {

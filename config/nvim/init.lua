@@ -19,7 +19,8 @@ require('plugin-settings.telescope')
 require('plugin-settings.treesitter')
 require('plugin-settings.treesitter-context')
 
-require('plugin-settings.lsp.lspconfig')
+require('plugin-settings.lsp.mason')
+require('plugin-settings.lsp.mason-lspconfig')
 require('plugin-settings.lsp.lspsaga')
 
 require('plugin-settings.colors.gruvbox')

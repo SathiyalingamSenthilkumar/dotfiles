@@ -75,7 +75,7 @@ local plugins = {
             ts_update()
         end,
     },
-    dependencies = { 'lewis6991/nvim-treesitter-context' },
+    dependencies = { 'nvim-treesitter/nvim-treesitter-context' },
   },
   { 'nvim-treesitter/nvim-treesitter-textobjects',
     dependencies = {

@@ -30,6 +30,7 @@ ZDOTDIR=~/.config/zsh
 * Telescope needs [ripgrep](https://github.com/BurntSushi/ripgrep) to be installed.
 * The clipboard utility of neovim is platform dependent, as neovim uses different clipboard tools on different platforms. The help for clipboard `:h clipboard` describes the clipboard tool needed for each platform.
 * Run `:checkhealth` on neovim to verify the working condition of different utilities.
+* Some plugins are dependent on emojis being installed (For example, LSPSaga uses light bulb emoji, which is provided by noto-fonts-emoji package).
 
 
 ### awesome

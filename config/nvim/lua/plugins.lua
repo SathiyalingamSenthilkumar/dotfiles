@@ -53,9 +53,6 @@ local plugins = {
   -- Navigation
   { 'phaazon/hop.nvim' },
 
-  -- Notifications
-  { 'rcarriga/nvim-notify' },
-
   -- Project management
   { 'ahmedkhalf/project.nvim' },
 
@@ -91,6 +88,9 @@ local plugins = {
   -- LSP Installer
   { 'williamboman/mason.nvim' },
   { 'williamboman/mason-lspconfig.nvim' },
+
+  -- LSP progress and Notifications
+  { 'j-hui/fidget.nvim' },
 
   -- Autocomplete with LSP and luasnip
   { 'hrsh7th/nvim-cmp',

@@ -5,12 +5,22 @@ end
 
 gs.setup {
   signs = {
-    add          = { hl = 'GitSignsAdd'   , text = '│', numhl = 'GitSignsAddNr'   , linehl = 'GitSignsAddLn' },
-    change       = { hl = 'GitSignsChange', text = '│', numhl = 'GitSignsChangeNr', linehl = 'GitSignsChangeLn' },
-    delete       = { hl = 'GitSignsDelete', text = '_', numhl = 'GitSignsDeleteNr', linehl = 'GitSignsDeleteLn' },
-    topdelete    = { hl = 'GitSignsDelete', text = '‾', numhl = 'GitSignsDeleteNr', linehl = 'GitSignsDeleteLn' },
-    changedelete = { hl = 'GitSignsChange', text = '~', numhl = 'GitSignsChangeNr', linehl = 'GitSignsChangeLn' },
+    add          = { text = '┃' },
+    change       = { text = '┃' },
+    delete       = { text = '_' },
+    topdelete    = { text = '‾' },
+    changedelete = { text = '~' },
+    untracked    = { text = '┆' },
   },
+  signs_staged = {
+    add          = { text = '┃' },
+    change       = { text = '┃' },
+    delete       = { text = '_' },
+    topdelete    = { text = '‾' },
+    changedelete = { text = '~' },
+    untracked    = { text = '┆' },
+  },
+  signs_staged_enable = true,
   signcolumn = true,  -- Toggle with `:Gitsigns toggle_signs`
   numhl      = true, -- Toggle with `:Gitsigns toggle_numhl`
   linehl     = false, -- Toggle with `:Gitsigns toggle_linehl`
@@ -40,18 +50,15 @@ gs.setup {
     row = 0,
     col = 1
   },
-  yadm = {
-    enable = false
-  },
 }
 
 local h = require('helpers')
 local keys = {
-  { 'n', '<Leader>gh', ':Gitsigns toggle_linehl<CR>' },
-  { 'n', '<Leader>gd', ':Gitsigns preview_hunk<CR>' },
-  { 'n', '<Leader>gD', ':Gitsigns diffthis<CR>', },
-  { 'n', '<Leader>gn', ':Gitsigns next_hunk<CR>' },
-  { 'n', '<Leader>gN', ':Gitsigns prev_hunk<CR>' },
-  { 'n', '<Leader>gr', ':Gitsigns reset_hunk<CR>' },
+  { 'n', '<Leader>gh', gs.toggle_linehl },
+  { 'n', '<Leader>gd', gs.preview_hunk },
+  { 'n', '<Leader>gD', function () gs.diffthis('~') end},
+  { 'n', '<Leader>gn', gs.next_hunk },
+  { 'n', '<Leader>gN', gs.prev_hunk },
+  { 'n', '<Leader>gr', gs.reset_hunk },
 }
 h.map_keys(keys)

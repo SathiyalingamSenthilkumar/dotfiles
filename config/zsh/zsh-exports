@@ -15,10 +15,10 @@ export MANWIDTH=999
 export EDITOR="nvim"
 export TERMINAL="kitty"
 
-PATH="${PATH}:/opt/JLink_Linux"
+PATH="${PATH}:/opt/SEGGER/JLink"
 PATH="${PATH}:/opt/nrf-command-line-tools/bin"
 PATH="${PATH}:$HOME/installation/manual/nrfutil"
 export PATH
 
-LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:/opt/JLink_Linux"
+LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:/opt/SEGGER/JLink"
 export LD_LIBRARY_PATH

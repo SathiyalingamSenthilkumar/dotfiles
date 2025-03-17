@@ -36,6 +36,12 @@ zstyle ':vcs_info:git:*' formats " %{$fg[white]%}(%{$fg[red]%}%m%u%c%{$fg[yellow
 PROMPT="%{$fg_bold[red]%}[%D{%L:%M:%S}] %{$fg_bold[yellow]%}%~%{$reset_color%}"
 PROMPT+="\$vcs_info_msg_0_ "
 PROMPT+="%(?:%{$fg_bold[green]%}➜:%{$fg_bold[red]%}➜)%{$reset_color%} "
+
+# Update prompt when entering Distrobox container
+if [ -n "$DISTROBOX_ENTER_PATH" ]; then
+    PROMPT="🚢 $PROMPT"
+fi
+
 # TODO look into this for more colors
 # https://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/
 # also ascii escape codes

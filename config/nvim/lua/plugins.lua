@@ -86,8 +86,8 @@ local plugins = {
   { 'nvimdev/lspsaga.nvim' },
 
   -- LSP Installer
-  { 'williamboman/mason.nvim' },
-  { 'williamboman/mason-lspconfig.nvim' },
+  { 'mason-org/mason.nvim' },
+  { 'mason-org/mason-lspconfig.nvim' },
 
   -- LSP progress and Notifications
   { 'j-hui/fidget.nvim' },

@@ -2,3 +2,9 @@
 
 # LSP
 compile_commands.json
+compile_commands*
+
+uncrustify
+uncrustify.cfg.gen
+
+venv/

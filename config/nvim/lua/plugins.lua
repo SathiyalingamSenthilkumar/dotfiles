@@ -118,7 +118,15 @@ local plugins = {
     ---@module "ibl"
     ---@type ibl.config
     opts = {},
-  }
+  },
+
+  -- AI Tools
+  {
+    "CopilotC-Nvim/CopilotChat.nvim",
+    dependencies = {
+      { "github/copilot.vim" }, -- or zbirenbaum/copilot.lua
+    },
+  },
 }
 
 return lazy.setup(plugins)

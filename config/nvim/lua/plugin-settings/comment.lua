@@ -15,12 +15,12 @@ comment.setup({
   },
 
   toggler = {
-    line = '<Leader>cc',
-    block = '<Leader>cdonotbind',
+    line = '<Leader>cl',
+    block = '<Leader>cb',
   },
 
   opleader = {
-    line = '<Leader>cdonotbind',
+    line = '<Leader>cl',
     block = '<Leader>cb',
   }
 })

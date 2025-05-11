@@ -23,8 +23,8 @@ local n_keys = {
   { 'n', '<Tab>',     ':bnext<CR>' },
   { 'n', '<S-Tab>',   ':bprev<CR>' },
 
-  -- Buffer deletion (vim-bbye plugin)
-  { 'n', '<Leader>c', ':Bdelete<CR>' },
+  -- Delete buffer and move to previous buffer
+  { 'n', '<Leader>bd', ':bprev | bdelete #<CR>' },
 
   -- Prefixed bindings
   -- Splitting, Prefix: <Leader>s

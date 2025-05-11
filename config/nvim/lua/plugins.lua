@@ -47,9 +47,6 @@ local plugins = {
   -- GIT handler
   { 'lewis6991/gitsigns.nvim' },
 
-  -- Buffer closer
-  { 'moll/vim-bbye' },
-
   -- Navigation
   { 'phaazon/hop.nvim' },
 

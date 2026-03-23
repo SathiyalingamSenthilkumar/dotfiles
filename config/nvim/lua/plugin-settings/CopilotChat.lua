@@ -4,7 +4,15 @@ if not status_ok then
   return
 end
 
-copilot_chat.setup()
+copilot_chat.setup(
+{
+  headers = {
+    user = '👤 You',
+    assistant = '🤖 Copilot',
+    tool = '🔧 Tool',
+  },
+}
+)
 
 
 local h = require('helpers')
@@ -15,6 +23,5 @@ local keys = {
     { 'n', '<Leader>ccl', ":CopilotChatLoad<CR>" },
     { 'n', '<Leader>ccp', ":CopilotChatPrompts<CR>" },
     { 'n', '<Leader>ccm', ":CopilotChatModels<CR>" },
-    { 'n', '<Leader>cca', ":CopilotChatAgents<CR>" },
 }
 h.map_keys(keys)

@@ -8,3 +8,6 @@ uncrustify
 uncrustify.cfg.gen
 
 venv/
+.venv/
+
+build/

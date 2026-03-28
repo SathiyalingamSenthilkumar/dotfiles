@@ -20,7 +20,7 @@ end
 
 local plugins = {
   -- common stuff
-  { 'kyazdani42/nvim-web-devicons' },
+  { 'nvim-tree/nvim-web-devicons' },
 
   -- Colorschemes
   { 'ellisonleao/gruvbox.nvim' },
@@ -41,7 +41,7 @@ local plugins = {
   { 'nvim-lualine/lualine.nvim' },
 
   -- File explorer
-  { 'kyazdani42/nvim-tree.lua' },
+  { 'nvim-tree/nvim-tree.lua' },
 
   -- GIT
   { 'lewis6991/gitsigns.nvim' },

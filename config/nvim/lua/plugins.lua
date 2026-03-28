@@ -50,7 +50,7 @@ local plugins = {
   },
 
   -- Navigation
-  { 'phaazon/hop.nvim' },
+  { 'smoka7/hop.nvim' },
 
   --Telescope (requires BurntSushi/ripgrep for live_grep to work)
   { 'nvim-telescope/telescope.nvim',

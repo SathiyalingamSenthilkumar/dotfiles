@@ -20,7 +20,6 @@ end
 
 local plugins = {
   -- common stuff
-  { 'nvim-lua/popup.nvim' },
   { 'kyazdani42/nvim-web-devicons' },
 
   -- Colorschemes
@@ -52,9 +51,6 @@ local plugins = {
 
   -- Navigation
   { 'phaazon/hop.nvim' },
-
-  -- Project management
-  { 'ahmedkhalf/project.nvim' },
 
   --Telescope (requires BurntSushi/ripgrep for live_grep to work)
   { 'nvim-telescope/telescope.nvim',

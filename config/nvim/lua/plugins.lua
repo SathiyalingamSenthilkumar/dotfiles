@@ -88,15 +88,9 @@ local plugins = {
   -- LSP progress and Notifications
   { 'j-hui/fidget.nvim' },
 
-  -- Autocomplete with LSP and luasnip
-  { 'hrsh7th/nvim-cmp',
-    dependencies = {
-      { 'hrsh7th/cmp-nvim-lsp' },
-      { 'hrsh7th/cmp-nvim-lsp-signature-help' },
-      { 'hrsh7th/cmp-path' },
-      { 'saadparwaiz1/cmp_luasnip' },
-      { 'L3MON4D3/LuaSnip' },
-    }
+  -- Autocomplete
+  { 'saghen/blink.cmp',
+    version = '1.*',
   },
 
   -- Autopairs (To automatically open and close brackets)

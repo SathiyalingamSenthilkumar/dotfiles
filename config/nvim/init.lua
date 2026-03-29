@@ -6,7 +6,7 @@ require('options')
 
 require('plugin-settings.autopairs')
 require('plugin-settings.bufferline')
-require('plugin-settings.cmp')
+require('plugin-settings.blink-cmp')
 require('plugin-settings.colorizer')
 require('plugin-settings.comment')
 require('plugin-settings.CopilotChat')

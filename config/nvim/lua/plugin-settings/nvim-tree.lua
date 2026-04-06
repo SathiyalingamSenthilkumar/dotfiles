@@ -9,50 +9,19 @@ local keys = {
 }
 h.map_keys(keys)
 
+local g = {
+  loaded_netrw = 1,
+  loaded_netrwPlugin = 1,
+}
+h.set_globals(g)
+
 nt.setup({
-  git = {
-    enable = true,
-    ignore = false,
-    timeout = 500
-  },
-  view = {
-    width = 35,
-    side = 'left',
-  },
   renderer = {
     indent_markers = {
       enable = true,
-      icons = {
-        corner = "└ ",
-        edge = "│ ",
-        none = "  ",
-      },
     },
-    icons = {
-      webdev_colors = true,
-      glyphs = {
-        default = "",
-        symlink = "",
-        folder = {
-          arrow_closed = "",
-          arrow_open = "",
-          default = "",
-          open = "",
-          empty = "",
-          empty_open = "",
-          symlink = "",
-          symlink_open = "",
-        },
-        git = {
-          unstaged = "",
-          staged = "S",
-          unmerged = "",
-          renamed = "➜",
-          deleted = "",
-          untracked = "U",
-          ignored = "◌",
-        },
-      },
-    },
+  },
+  filters = {
+    git_ignored = false,
   },
 })

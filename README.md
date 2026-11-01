@@ -34,6 +34,15 @@ ZDOTDIR=~/.config/zsh
 * The lazygit plugin requires [lazygit](https://github.com/jesseduffield/lazygit) to be installed.
 
 
+### sway
+* Install sway together with swayidle and swaylock, which sway only suggests
+  (package names as on Ubuntu/Debian):
+```
+sudo apt install sway swayidle swaylock
+```
+* The screen locks after 10 minutes of inactivity and before suspend, and
+  manually with `$mod+Escape`.
+
 ### awesome
 * The config has dependencies on following packages:
     * picom - Compositor for Xorg.

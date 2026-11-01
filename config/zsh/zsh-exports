@@ -3,10 +3,6 @@ HISTFILE=$ZDOTDIR/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
 
-# path
-export PATH="$HOME/.local/bin":$PATH
-export PATH="/usr/local/opt/make/libexec/gnubin:$PATH" # For GNU Make
-
 # man page
 export MANPAGER='nvim +Man!' # Man page in nvim
 export MANWIDTH=999
@@ -15,10 +11,17 @@ export MANWIDTH=999
 export EDITOR="nvim"
 export TERMINAL="kitty"
 
-PATH="${PATH}:/opt/SEGGER/JLink"
-PATH="${PATH}:/opt/nrf-command-line-tools/bin"
-PATH="${PATH}:$HOME/installation/manual/nrfutil"
-export PATH
+# For yEd to work properly with Sway
+export _JAVA_AWT_WM_NONREPARENTING=1
 
-LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:/opt/SEGGER/JLink"
-export LD_LIBRARY_PATH
+# path
+typeset -gU path PATH # Drop duplicate entries
+PATH="$HOME/.local/bin:${PATH}"
+PATH="/opt/nvim-linux-x86_64/bin:${PATH}"
+
+PATH="${PATH}:/opt/SEGGER/JLink"
+PATH="${PATH}:$HOME/installation/manual/nrfutil"
+PATH="${PATH}:$HOME/installation/STM/bin"
+PATH="${PATH}:$HOME/installation/manual/yEd"
+
+export PATH

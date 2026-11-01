@@ -42,6 +42,12 @@ exec swayidle -w \
 # computer goes to sleep. The displays are deliberately not powered off, as
 # outputs don't reliably come back on after "output * power off".
 
+### Autostart
+#
+# Polkit agent, shows the password prompt when an app asks for admin rights.
+# Sway doesn't run the XDG autostart entries, so it has to be started here.
+exec lxpolkit
+
 ### Input configuration
 #
 # Example configuration:

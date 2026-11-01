@@ -204,6 +204,12 @@ mode "resize" {
 bindsym $mod+shift+s mode "resize"
 
 #
+# Screen shot:
+#
+# Select an area, save it to ~ and copy it to the clipboard
+bindsym $mod+p exec sh -c 'f=~/$(date +%Y%m%d_%Hh%Mm%Ss)_grim.png; slurp | grim -g - "$f" && wl-copy < "$f"'
+
+#
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.

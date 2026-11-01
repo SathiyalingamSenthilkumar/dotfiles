@@ -43,6 +43,7 @@ sudo apt install sway swayidle swaylock
 * The screen locks after 10 minutes of inactivity and before suspend, and
   manually with `$mod+Escape`.
 * lxpolkit shows the password prompt when an app asks for admin rights.
+* The area screenshot binding (`$mod+p`) needs grim, slurp and wl-clipboard.
 
 ### awesome
 * The config has dependencies on following packages:

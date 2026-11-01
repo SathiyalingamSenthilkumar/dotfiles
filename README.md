@@ -44,6 +44,10 @@ sudo apt install sway swayidle swaylock
   manually with `$mod+Escape`.
 * lxpolkit shows the password prompt when an app asks for admin rights.
 * The area screenshot binding (`$mod+p`) needs grim, slurp and wl-clipboard.
+* The status bar is waybar, its config needs:
+    * fonts-font-awesome - Icons.
+    * pavucontrol - Opened by clicking on the volume.
+    * power-profiles-daemon - Power profile module.
 
 ### awesome
 * The config has dependencies on following packages:

@@ -62,6 +62,9 @@ bindkey "^R" history-incremental-search-backward #Backward search
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f $ZDOTDIR/completion/_fnm ] && fpath+="$ZDOTDIR/completion/"
 # export FZF_DEFAULT_COMMAND='rg --hidden -l ""'
+
+# From nrfutil completion install
+[[ -r "${HOME}/.nrfutil/share/nrfutil-completion/scripts/zsh/setup.zsh" ]] && . "${HOME}/.nrfutil/share/nrfutil-completion/scripts/zsh/setup.zsh"
 compinit
 
 # Edit line in vim with ctrl-e:

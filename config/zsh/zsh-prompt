@@ -42,6 +42,12 @@ if [ -n "$DISTROBOX_ENTER_PATH" ]; then
     PROMPT="🚢 $PROMPT"
 fi
 
+# Check when source the nrfutil-toolchain-manager env
+# NOTE: Have to manually reload the settings or do `zsh --login`
+if [[ "$PATH" == *"ncs/toolchains"* ]]; then
+    PROMPT="(nRF 🧭) $PROMPT"
+fi
+
 # TODO look into this for more colors
 # https://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/
 # also ascii escape codes

@@ -1,0 +1,29 @@
+# Screen arrangements, re-applied whenever monitors are plugged in or out.
+# External monitors are matched by make, model and serial, so it doesn't
+# matter which port or dock they are connected through.
+# Get the names with: swaymsg -t get_outputs
+
+# Office: two ASUS through the dock, laptop on the right
+profile office {
+    output "ASUSTek COMPUTER INC PA278QV M6LMQS179015" position 0,0
+    output "ASUSTek COMPUTER INC PA278QV M6LMQS178948" position 2560,0
+    output eDP-1 position 5120,0
+}
+
+# Home: two Dell through the laptop's own ports, laptop on the right
+profile home {
+    output "Dell Inc. DELL U2412M TK85K3AO1T6L" position 0,0
+    output "Dell Inc. DELL U2412M YPPY06850QGL" position 1920,0
+    output eDP-1 position 3840,0
+}
+
+# Meeting room: any single screen, laptop on the left
+profile meeting {
+    output eDP-1 position 0,0
+    output * position 1920,0
+}
+
+# Laptop only
+profile laptop {
+    output eDP-1 position 0,0
+}

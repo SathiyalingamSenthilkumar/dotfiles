@@ -48,6 +48,10 @@ exec swayidle -w \
 # Sway doesn't run the XDG autostart entries, so it has to be started here.
 exec lxpolkit
 
+# Screen arrangement per desk, re-applied on docking/undocking, see kanshi/config.
+# A reload resets the outputs, so tell a running kanshi to re-apply, else start it.
+exec_always pkill -HUP -x kanshi || kanshi
+
 ### Input configuration
 #
 # Example configuration:

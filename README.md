@@ -48,6 +48,9 @@ sudo apt install sway swayidle swaylock
     * fonts-font-awesome - Icons.
     * pavucontrol - Opened by clicking on the volume.
     * power-profiles-daemon - Power profile module.
+* kanshi arranges the screens per desk. The profiles in `kanshi/config` match
+  the monitors by make, model and serial, so adjust them for other monitors
+  (get the names with `swaymsg -t get_outputs`).
 
 ### awesome
 * The config has dependencies on following packages:

@@ -1,0 +1,102 @@
+/* Launcher ($mod+r in sway) to match the black/neon backgrounds: translucent
+ * black with a faint cyan border, same palette as waybar/style.css. */
+
+configuration {
+    modi: "drun,run,window";
+    show-icons: true;
+    font: "Hack Nerd Font Mono 11";
+    display-drun: "Apps";
+    display-run: "Run";
+    display-window: "Windows";
+    drun-display-format: "{name}";
+}
+
+/* Start from an empty theme instead of rofi's default one */
+@theme "/dev/null"
+
+* {
+    fg: #c9d1d9;
+    dim: #6b7280;
+    accent: #2ad4ff;
+    critical: #f87171;
+
+    background-color: transparent;
+    text-color: @fg;
+}
+
+window {
+    location: center;
+    width: 600px;
+    padding: 12px;
+    /* Fairly opaque, as sway can't blur what is behind it */
+    background-color: #000000e6;
+    border: 1px;
+    border-color: #2ad4ff40;
+    border-radius: 10px;
+}
+
+mainbox {
+    spacing: 10px;
+    children: [ inputbar, message, listview ];
+}
+
+inputbar {
+    padding: 8px 10px;
+    spacing: 8px;
+    border: 0 0 1px 0;
+    border-color: #2ad4ff40;
+    children: [ prompt, entry ];
+}
+
+prompt {
+    text-color: @accent;
+}
+
+entry {
+    placeholder: "Search";
+    placeholder-color: @dim;
+    cursor: text;
+}
+
+message {
+    padding: 6px 10px;
+}
+
+listview {
+    lines: 8;
+    fixed-height: false;
+    scrollbar: false;
+    spacing: 2px;
+}
+
+element {
+    padding: 6px 10px;
+    spacing: 10px;
+    border-radius: 6px;
+}
+
+element selected.normal,
+element selected.active {
+    background-color: #2ad4ff1f;
+    text-color: @accent;
+}
+
+/* Running windows/apps */
+element normal.active,
+element alternate.active {
+    text-color: @accent;
+}
+
+element normal.urgent,
+element selected.urgent {
+    text-color: @critical;
+}
+
+element-icon {
+    size: 22px;
+}
+
+element-text {
+    vertical-align: 0.5;
+    text-color: inherit;
+}

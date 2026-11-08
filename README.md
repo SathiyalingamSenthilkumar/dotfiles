@@ -54,6 +54,7 @@ sudo apt install sway swayidle swaylock
 * The lock screen options are in `swaylock/config`.
 * Notifications are shown by sway-notification-center (swaync), its style is in
   `swaync/style.css`.
+* The launcher (`$mod+r`) is rofi, its theme is in `rofi/config.rasi`.
 
 ### awesome
 * The config has dependencies on following packages:

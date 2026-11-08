@@ -1,0 +1,26 @@
+/* Notifications to match the black/neon backgrounds: translucent black with
+ * a faint cyan border, same palette as waybar/style.css.
+ * Only the colours are changed, the rest comes from the packaged style. */
+
+@import url("file:///etc/xdg/swaync/style.css");
+
+:root {
+  --cc-bg: rgba(0, 0, 0, 0.9);
+  --noti-border-color: rgba(42, 212, 255, 0.25);
+  --noti-bg: 10, 10, 10;
+  --noti-bg-alpha: 0.92;
+  --noti-bg-darker: rgb(5, 5, 5);
+  --noti-bg-hover: rgb(24, 24, 24);
+  --noti-bg-focus: rgba(42, 212, 255, 0.12);
+  --noti-close-bg: rgb(40, 40, 40);
+  --noti-close-bg-hover: rgb(60, 60, 60);
+  --text-color: #c9d1d9;
+  --text-color-disabled: #6b7280;
+  --bg-selected: #2ad4ff;
+}
+
+/* Red border for critical notifications */
+.notification-row .notification-background .notification.critical,
+.notification-group.critical {
+  border-color: #f87171;
+}

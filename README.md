@@ -52,6 +52,8 @@ sudo apt install sway swayidle swaylock
   the monitors by make, model and serial, so adjust them for other monitors
   (get the names with `swaymsg -t get_outputs`).
 * The lock screen options are in `swaylock/config`.
+* Notifications are shown by sway-notification-center (swaync), its style is in
+  `swaync/style.css`.
 
 ### awesome
 * The config has dependencies on following packages:

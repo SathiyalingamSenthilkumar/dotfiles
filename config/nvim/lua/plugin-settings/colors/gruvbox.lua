@@ -9,6 +9,8 @@ vim.g.gruvbox_contrast_dark = 'hard'
 
 gb.setup({
     contrast = "hard",
+    -- No background, so kitty's translucent background shows through
+    transparent_mode = true,
     palette_overrides = {
         dark0_hard = "#1c1c1c",
     },

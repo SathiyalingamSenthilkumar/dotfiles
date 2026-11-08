@@ -77,23 +77,24 @@
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "{usage}% ",
+        "format": "{usage}% <span color='#4ade80'></span>",
         "tooltip": false
     },
     "memory": {
-        "format": "{}% "
+        "format": "{}% <span color='#4ade80'></span>"
     },
     "temperature": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C <span color='#4ade80'>{icon}</span>",
+        "format-critical": "{temperatureC}°C <span color='#f87171'>{icon}</span>",
         "format-icons": ["", "", ""]
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
+        "format": "{percent}% <span color='#facc15'>{icon}</span>",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
@@ -102,17 +103,18 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
-        "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
+        "format": "{capacity}% <span color='#facc15'>{icon}</span>",
+        "format-critical": "{capacity}% <span color='#f87171'>{icon}</span>",
+        "format-full": "{capacity}% <span color='#facc15'>{icon}</span>",
+        "format-charging": "{capacity}% <span color='#4ade80'></span>",
+        "format-plugged": "{capacity}% <span color='#4ade80'></span>",
+        "format-alt": "{time} <span color='#facc15'>{icon}</span>",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
     "power-profiles-daemon": {
-      "format": "{icon}",
+      "format": "<span color='#facc15'>{icon}</span>",
       "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
       "tooltip": true,
       "format-icons": {
@@ -124,21 +126,21 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
+        "format-wifi": "{essid} ({signalStrength}%) <span color='#2ad4ff'></span>",
+        "format-ethernet": "{ipaddr}/{cidr} <span color='#2ad4ff'></span>",
         "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
+        "format-linked": "{ifname} (No IP) <span color='#2ad4ff'></span>",
+        "format-disconnected": "Disconnected <span color='#f87171'>⚠</span>",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
-        "format-source-muted": "",
+        "format": "{volume}% <span color='#2ad4ff'>{icon}</span> {format_source}",
+        "format-bluetooth": "{volume}% <span color='#2ad4ff'>{icon}</span><span color='#2ad4ff'></span> {format_source}",
+        "format-bluetooth-muted": "<span color='#6b7280'></span> <span color='#6b7280'>{icon}</span><span color='#6b7280'></span> {format_source}",
+        "format-muted": "<span color='#6b7280'></span> {format_source}",
+        "format-source": "{volume}% <span color='#2ad4ff'></span>",
+        "format-source-muted": "<span color='#6b7280'></span>",
         "format-icons": {
             "headphone": "",
             "hands-free": "",

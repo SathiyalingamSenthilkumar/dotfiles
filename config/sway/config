@@ -20,7 +20,8 @@ set $term kitty
 # on the original workspace that the command was run on.
 set $menu rofi -show drun
 # Your preferred screen locker
-set $lock swaylock -f -c 000000 -i ~/.config/sway/backgrounds/lock.jpg -s fill
+# Options and colours are in swaylock/config
+set $lock swaylock -f
 
 include /etc/sway/config-vars.d/*
 
@@ -55,6 +56,28 @@ exec_always pkill -HUP -x kanshi || kanshi
 # Same background on all screens, picked at random on start and on every reload.
 # Also overrides the distro default from /etc/sway/config.d/.
 exec_always sh -c 'swaymsg output "*" bg "$(ls ~/.config/sway/backgrounds/bg-*.jpg | shuf -n 1)" fill'
+
+### Appearance
+#
+# Window colours to match the black/neon backgrounds:
+# cyan for the focused window, dark grey for the rest, red when urgent and
+# green for the indicator of where the next window will be split.
+#
+# class                 border  backgr. text    indicator child_border
+client.focused          #2ad4ff #0e2a33 #e5e7eb #4ade80   #2ad4ff
+client.focused_inactive #374151 #111111 #9ca3af #374151   #374151
+client.unfocused        #1f2937 #0a0a0a #6b7280 #1f2937   #1f2937
+client.urgent           #f87171 #2a0f0f #f87171 #f87171   #f87171
+
+# No title bars, just a thin border: waybar already shows the focused window's
+# title. Tabbed and stacked layouts still show their tab titles.
+default_border pixel 2
+default_floating_border pixel 2
+
+# Dark GTK apps (pavucontrol, nautilus, ...): GTK4/libadwaita apps follow
+# color-scheme, GTK3 apps need the dark theme.
+exec gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+exec gsettings set org.gnome.desktop.interface gtk-theme Adwaita-dark
 
 ### Input configuration
 #

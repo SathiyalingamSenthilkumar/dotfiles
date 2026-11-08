@@ -1,0 +1,39 @@
+# Lock screen to match the black/neon backgrounds, see swaylock(1).
+# The indicator ring uses the same palette as the window borders:
+# cyan while typing (green flash per key), yellow for backspace/clear,
+# red for a wrong password.
+
+color=000000
+image=~/.config/sway/backgrounds/lock.jpg
+scaling=fill
+
+font=Hack Nerd Font Mono
+# Just inside the glowing ring of lock.jpg on 1920x1200 screens
+indicator-radius=245
+indicator-thickness=8
+
+# Clear while typing so the padlock in lock.jpg shows, near-opaque when
+# swaylock shows its text so the text isn't drawn over the padlock
+inside-color=00000000
+inside-clear-color=000000ee
+inside-ver-color=000000ee
+inside-wrong-color=000000ee
+
+ring-color=2ad4ffff
+ring-clear-color=facc15ff
+ring-ver-color=2ad4ffff
+ring-wrong-color=f87171ff
+
+key-hl-color=4ade80ff
+bs-hl-color=facc15ff
+
+line-color=00000000
+line-clear-color=00000000
+line-ver-color=00000000
+line-wrong-color=00000000
+separator-color=00000000
+
+text-color=c9d1d9ff
+text-clear-color=facc15ff
+text-ver-color=2ad4ffff
+text-wrong-color=f87171ff

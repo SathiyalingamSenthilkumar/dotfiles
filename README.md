@@ -51,6 +51,7 @@ sudo apt install sway swayidle swaylock
 * kanshi arranges the screens per desk. The profiles in `kanshi/config` match
   the monitors by make, model and serial, so adjust them for other monitors
   (get the names with `swaymsg -t get_outputs`).
+* The lock screen options are in `swaylock/config`.
 
 ### awesome
 * The config has dependencies on following packages:

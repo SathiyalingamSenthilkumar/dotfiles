@@ -20,7 +20,7 @@ set $term kitty
 # on the original workspace that the command was run on.
 set $menu rofi -show drun
 # Your preferred screen locker
-set $lock swaylock -f
+set $lock swaylock -f -c 000000 -i ~/.config/sway/backgrounds/lock.jpg -s fill
 
 include /etc/sway/config-vars.d/*
 
@@ -51,6 +51,10 @@ exec lxpolkit
 # Screen arrangement per desk, re-applied on docking/undocking, see kanshi/config.
 # A reload resets the outputs, so tell a running kanshi to re-apply, else start it.
 exec_always pkill -HUP -x kanshi || kanshi
+
+# Same background on all screens, picked at random on start and on every reload.
+# Also overrides the distro default from /etc/sway/config.d/.
+exec_always sh -c 'swaymsg output "*" bg "$(ls ~/.config/sway/backgrounds/bg-*.jpg | shuf -n 1)" fill'
 
 ### Input configuration
 #

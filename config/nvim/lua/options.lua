@@ -7,17 +7,16 @@ local o = {
   conceallevel = 0,       -- Don't conceal syntax stuff
   cursorline = false,     -- Highlight the line with the cursor
   -- gcr = '',            -- Cursor look override
-  hidden = true,          -- Hide buffers when abandoned
   laststatus = 3,         -- Use single statusbar (nvim 0.7.0)
   number = true,          -- Show line numbers
   pumblend = 30,          -- Slight popup transparency
   pumheight = 10,         -- Popup menu max height
-  ruler = true,           -- Show ruler
   showmode = false,       -- Don't show mode, lualine does that
   showtabline = 2,        -- Always show the tabline
   signcolumn = 'yes',     -- Add the sign column
   termguicolors = true,
   title = true,           -- Set the terminal title
+  winborder = 'rounded',  -- Border for floating windows
   wrap = true,            -- Softwrap text
 
   -- Timings
@@ -27,10 +26,6 @@ local o = {
   -- Scrolling
   scrolloff = 10,         -- Move up/down 10 lines ahead of cursor
   sidescrolloff = 20,     -- Move left/right 20 columns ahead of cursor
-
-  -- Encodings
-  encoding = 'utf-8',
-  fileencoding = 'utf-8',
 
   -- Split behavior
   splitbelow = true,      -- New horizontal splits below
@@ -43,13 +38,10 @@ local o = {
   tabstop = 4,            -- Spaces per tab
 
   -- Searching
-  hlsearch = true,        -- Highlight search
   ignorecase = true,      -- Ignore case when searching
-  incsearch = true,       -- Incremental search
   smartcase = true,       -- Don't ignore case when search term includes case
 
   -- Swap and backup stuff
-  autoread = true,        -- Automatically reload changed files
   backup = false,         -- No backup files
   swapfile = false,       -- No swap files
   writebackup = false     -- No write-backup

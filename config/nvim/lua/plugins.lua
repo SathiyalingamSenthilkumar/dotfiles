@@ -62,19 +62,15 @@ local plugins = {
 
   -- Treesitter
   { 'nvim-treesitter/nvim-treesitter',
-    build = {
-        function()
-            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-            ts_update()
-        end,
-    },
-    dependencies = { 'nvim-treesitter/nvim-treesitter-context' },
+    branch = 'main',
+    lazy = false,
+    build = ':TSUpdate',
   },
+  { 'nvim-treesitter/nvim-treesitter-context' },
   { 'nvim-treesitter/nvim-treesitter-textobjects',
-    dependencies = {
-            { 'nvim-treesitter/nvim-treesitter' },
-            { 'nvim-treesitter' },
-        }
+    branch = 'main',
+    lazy = false,
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
   },
 
   -- LSP

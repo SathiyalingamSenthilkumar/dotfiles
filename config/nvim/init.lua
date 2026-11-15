@@ -21,6 +21,7 @@ require('plugin-settings.telescope')
 require('plugin-settings.treesitter')
 require('plugin-settings.treesitter-context')
 
+require('plugin-settings.lsp.lsp')
 require('plugin-settings.lsp.mason')
 require('plugin-settings.lsp.mason-lspconfig')
 require('plugin-settings.lsp.lspsaga')

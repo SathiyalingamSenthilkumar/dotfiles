@@ -1,7 +1,4 @@
-local common = require("plugin-settings.lsp.server-settings.common_functions")
-
 return {
-  on_attach = common.default_attach,
   root_markers = { '.git' },
   on_init = function(client)
     if client.workspace_folders then

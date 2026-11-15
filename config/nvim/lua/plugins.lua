@@ -25,11 +25,11 @@ local plugins = {
   -- Colorschemes
   { 'ellisonleao/gruvbox.nvim' },
 
-  { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
+  { 'catppuccin/nvim', name = 'catppuccin' },
 
   { 'rebelot/kanagawa.nvim' },
 
-  { 'folke/tokyonight.nvim', lazy = false, priority = 1000 },
+  { 'folke/tokyonight.nvim' },
 
   -- Color highlighter
   { 'catgoose/nvim-colorizer.lua' },
@@ -95,13 +95,7 @@ local plugins = {
   },
 
   -- Indend line
-  {
-    "lukas-reineke/indent-blankline.nvim",
-    main = "ibl",
-    ---@module "ibl"
-    ---@type ibl.config
-    opts = {},
-  },
+  { 'lukas-reineke/indent-blankline.nvim' },
 
   -- AI Tools
   {

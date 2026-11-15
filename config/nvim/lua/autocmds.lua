@@ -5,7 +5,6 @@ local cmds = {
   { 'VimResized',   { command = 'wincmd =' } },
 
   -- Add spellcheck for some files
-  -- TODO: Figure out how to do setlocal in LUA
-  { 'FileType',     { pattern = { 'gitcommit', 'markdown' }, command = 'setlocal spell' } },
+  { 'FileType',     { pattern = { 'gitcommit', 'markdown' }, callback = function() vim.opt_local.spell = true end } },
 }
 h.create_autocmds('ToeAutoCmds', cmds)

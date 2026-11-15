@@ -57,9 +57,6 @@ local plugins = {
     dependencies = { 'nvim-lua/plenary.nvim' }
   },
 
-  -- Comment toggle
-  { 'numToStr/Comment.nvim' },
-
   -- Treesitter
   { 'nvim-treesitter/nvim-treesitter',
     branch = 'main',

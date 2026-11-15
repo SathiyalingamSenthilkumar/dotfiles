@@ -44,12 +44,18 @@ local n_keys = {
   { 'n', '<Leader><Down>',  ':resize +5<CR>' },
   { 'n', '<Leader><Left>',  ':vertical resize -5<CR>' },
   { 'n', '<Leader><Right>', ':vertical resize +5<CR>' },
+
+  -- Toggle comment on line, using the builtin gcc
+  { 'n', '<Leader>cl', 'gcc', { silent = true, remap = true } },
 }
 
 local v_keys = {
   -- Indentation re-select
   { 'v', '<', '<gv' },
   { 'v', '>', '>gv' },
+
+  -- Toggle comment on selection, using the builtin gc
+  { 'x', '<Leader>cl', 'gc', { silent = true, remap = true } },
 }
 
 h.map_keys(n_keys)

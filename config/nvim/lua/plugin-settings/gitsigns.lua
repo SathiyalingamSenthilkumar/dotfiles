@@ -57,8 +57,8 @@ local keys = {
   { 'n', '<Leader>gh', gs.toggle_linehl },
   { 'n', '<Leader>gd', gs.preview_hunk },
   { 'n', '<Leader>gD', function () gs.diffthis('~') end},
-  { 'n', '<Leader>gn', gs.next_hunk },
-  { 'n', '<Leader>gN', gs.prev_hunk },
+  { 'n', '<Leader>gn', function() gs.nav_hunk('next') end },
+  { 'n', '<Leader>gN', function() gs.nav_hunk('prev') end },
   { 'n', '<Leader>gr', gs.reset_hunk },
 }
 h.map_keys(keys)

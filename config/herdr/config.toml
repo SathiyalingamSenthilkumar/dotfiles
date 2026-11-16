@@ -1,1 +1,16 @@
 onboarding = false
+
+[theme.custom]
+panel_bg = "reset"
+accent = "#2ad4ff"
+text = "#c9d1d9"
+subtext0 = "#6b7280"
+active_row_bg = "#0e2a33"
+selection_bg = "#0e2a33"
+surface0 = "#1f2937"
+surface1 = "#374151"
+overlay0 = "#6b7280"
+overlay1 = "#9ca3af"
+green = "#4ade80"
+yellow = "#facc15"
+red = "#f87171"

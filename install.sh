@@ -68,7 +68,14 @@ esac
 
 # Setup .config directory
 for d in ${CONFIG_NAMES[@]}; do
-  symlinker "${CONFIG_SRC}/${d}" "${CONFIG_DST}/${d}"
+  case ${d} in
+    herdr)
+      symlinker "${CONFIG_SRC}/${d}/config.toml" "${CONFIG_DST}/${d}/config.toml"
+      ;;
+    *)
+      symlinker "${CONFIG_SRC}/${d}" "${CONFIG_DST}/${d}"
+      ;;
+  esac
 done
 
 # Setup .local/bin directory

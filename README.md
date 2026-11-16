@@ -56,6 +56,13 @@ sudo apt install sway swayidle swaylock
   `swaync/style.css`.
 * The launcher (`$mod+r`) is rofi, its theme is in `rofi/config.rasi`.
 
+### herdr
+* Install [herdr](https://herdr.dev), the terminal multiplexer for coding agents.
+* Only `herdr/config.toml` is linked, as herdr keeps its sockets, logs and
+  sessions in the same directory.
+* `herdr --default-config` prints every option with its default.
+* Apply config changes to a running herdr with `herdr server reload-config`.
+
 ### awesome
 * The config has dependencies on following packages:
     * picom - Compositor for Xorg.

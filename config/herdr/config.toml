@@ -14,3 +14,7 @@ overlay1 = "#9ca3af"
 green = "#4ade80"
 yellow = "#facc15"
 red = "#f87171"
+
+[update]
+version_check = false
+manifest_check = false

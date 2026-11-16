@@ -60,6 +60,10 @@ sudo apt install sway swayidle swaylock
 * Install [herdr](https://herdr.dev), the terminal multiplexer for coding agents.
 * Only `herdr/config.toml` is linked, as herdr keeps its sockets, logs and
   sessions in the same directory.
+* Run `herdr integration install claude` so herdr can resume Claude Code
+  sessions after a server restart. Run it again after updating herdr.
+* The background update and agent-detection checks are off; fetch new agent
+  rules with `herdr server update-agent-manifests`.
 * `herdr --default-config` prints every option with its default.
 * Apply config changes to a running herdr with `herdr server reload-config`.
 
